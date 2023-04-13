@@ -1,7 +1,7 @@
 
 # Introduction 
 
-![Overview](./private-dns-hub-spoke-1.png)
+![Overview](./private-dns-hub-spoke-2.png)
 > Note: This repo implements `Option B` the new approach using the [Azure Private DNS Resolver](https://learn.microsoft.com/en-us/azure/dns/dns-private-resolver-overview).
 
 # Steps to reproduce
