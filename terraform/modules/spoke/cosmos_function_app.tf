@@ -54,6 +54,10 @@ resource "azurerm_linux_function_app" "cosmos_client" {
   }
 
   app_settings = {
+    # App settings
+    COSMOS_DB_KEY      = azurerm_cosmosdb_account.cosmos.primary_key
+    COSMOS_DB_NAME     = "nodejs-client-test"
+    COSMOS_DB_ENDPOINT = azurerm_cosmosdb_account.cosmos.endpoint
     # Common settings
     WEBSITE_DNS_SERVER     = "168.63.129.16"
     WEBSITE_VNET_ROUTE_ALL = "1"
