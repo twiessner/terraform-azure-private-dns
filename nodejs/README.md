@@ -11,5 +11,24 @@ guides for local function app development.
 ## Configuration
 
 ```bash
+# Create project
 func init azure-cosmos-nodejs-client-project --worker-runtime node --language javascript
+
+# Create function
+cd azure-cosmos-nodejs-client-project
+func new --name "cosmos-db-client-trigger" --template "HTTP Trigger"
+# choose option: 3. node
+# choose option: 1. javascript
+
+# Install dependencies
+npm install
+# Verify runtime
+func start
+
+# Configure Azure runtime
+func azure functionapp fetch-app-settings func-private-dns-westeu
+func azure storage fetch-connection-string <StorageAccountName>
+
+# Publish function
+func azure functionapp publish func-private-dns-westeu
 ```
