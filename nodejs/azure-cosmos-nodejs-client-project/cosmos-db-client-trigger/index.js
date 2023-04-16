@@ -3,8 +3,7 @@ const { CosmosClient } = require("@azure/cosmos");
 module.exports = async function (context, req) {
     context.log("Trigger function azure-cosmos-db-http-trigger...");
 
-    const hostName = process.env["COSMOS_DB_HOST_NAME"];
-    const endpoint = "https://" + hostName + ":443/"
+    const endpoint = process.env["COSMOS_DB_ENDPOINT"];
     context.log("Using Cosmos endpoint '" + endpoint + "'...");
 
     const masterKey = process.env["COSMOS_DB_KEY"];
