@@ -1,6 +1,7 @@
 
-data "azurerm_client_config" "current" {
-}
+/**
+
+data "azurerm_client_config" "current" {}
 
 resource "azurerm_public_ip" "gateway" {
   name                = join("-", ["pip", var.workload, var.location.short])
@@ -40,3 +41,5 @@ resource "azurerm_virtual_network_gateway" "gateway" {
     vpn_client_protocols = ["OpenVPN"]
   }
 }
+
+**/
